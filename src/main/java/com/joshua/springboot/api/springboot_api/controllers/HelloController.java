@@ -3,8 +3,10 @@ package com.joshua.springboot.api.springboot_api.controllers;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.ui.Model;
@@ -21,6 +23,8 @@ public class HelloController {
 
         Map<String, String> json = new HashMap<>();
         json.put("message", "Hello World API Spring Boot");
+        json.put("version", "1.0.0");
+        json.put("date", new Date().toString());
 
         return json;
     }
